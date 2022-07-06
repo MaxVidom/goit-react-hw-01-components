@@ -1,15 +1,16 @@
 import css from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 export default function Statistic({ title, stats }) {
   return (
     <section className={css.statistics}>
       {title && <h2 className={css.title}>Upload stats</h2>}
       <ul className={css.statList}>
-        {stats.map(stat => {
+        {stats.map(({ id, label, percentage }) => {
           return (
-            <li key={stat.id} className={css.item}>
-              <span className={css.label}>{stat.label}</span>
-              <span className={css.percentage}>{stat.percentage}%</span>
+            <li key={id} className={css.item}>
+              <span className={css.label}>{label}</span>
+              <span className={css.percentage}>{percentage}%</span>
             </li>
           );
         })}
@@ -17,3 +18,14 @@ export default function Statistic({ title, stats }) {
     </section>
   );
 }
+
+Statistic.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
