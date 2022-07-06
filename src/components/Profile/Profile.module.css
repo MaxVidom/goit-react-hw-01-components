@@ -1,0 +1,33 @@
+.profile {
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.stats {
+    margin: 0;
+    padding: 0;
+}
+
+.stats {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center
+}
+
+.stats>li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.stats>li {
+    width: 100px;
+    border: 1px solid grey;
+}
+
+.label {
+    display: block;
+}

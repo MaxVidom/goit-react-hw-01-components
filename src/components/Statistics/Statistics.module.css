@@ -1,0 +1,22 @@
+.statistics {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.statList {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    width: 70px;
+    border: 2px dashed black;
+}
+
+.item:not(:last-child) {
+    margin-right: 5px;
+}
+
+.label {
+    display: block;
+}

@@ -1,0 +1,24 @@
+.transactionHistory {
+
+    text-align: center;
+    min-width: 500px;
+    height: auto;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+  thead {
+      background-color: #b93c51;
+  }
+  th {
+      padding: 10px;
+  }
+
+  td {
+      border: 1px solid;
+      border-color: #dfa45d;
+      border-right: none;
+      border-left: none;
+      border-top: none;
+  }
